@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+       
+        :root {
+            --google-blue: #1a73e8;
+            --google-gray: #5f6368;
+            --bg-color: #f0f2f5;
+            --container-bg: #ffffff;
+            --border-color: #dadce0;
+            --focus-border-color: #1a73e8;
+            --submit-hover: #1764cf;
+            --invalid-color: #d93025;
+            --valid-color: #1e8e3e;
+        }
+
+        body {
+            font-family: 'Roboto', 'Arial', sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: var(--google-gray);
+        }
+
+        .container {
+            background-color: var(--container-bg);
+            padding: 2.5em;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--google-blue);
+            margin-top: 0;
+            margin-bottom: 1.5em;
+            font-weight: 400;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 0.8em;
+            box-sizing: border-box;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1em;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            color: var(--google-gray);
+            background-color: #f8f9fa;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            border-color: var(--focus-border-color);
+            box-shadow: 0 0 0 1px var(--focus-border-color);
+            outline: none;
+            background-color: var(--container-bg);
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 0.8em 1.5em;
+            background-color: var(--google-blue);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: var(--submit-hover);
+        }
+
+        /* HTML5 validation styling */
+        input:invalid:focus,
+        select:invalid:focus {
+            border-color: var(--invalid-color);
+            box-shadow: 0 0 0 1px var(--invalid-color);
+        }
+
+        input:valid:focus,
+        select:valid:focus {
+            border-color: var(--valid-color);
+            box-shadow: 0 0 0 1px var(--valid-color);
+        }
+        
+        small {
+            font-size: 0.8em;
+            color: #70757a;
+            display: block;
+            margin-top: 0.3em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Registration Form</h2>
+    <form action="#" method="post" onsubmit="alert('Form submitted successfully!');">
+        
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="e.g., John Doe" required minlength="3">
+        </div>
+        
+        <div class="form-group">
+            <label for="uid">Identity No:</label>
+            <input type="text" id="uid" name="uid" placeholder="e.g., 23XYZ12345" required minlength="5">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="e.g., john.doe@example.com" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="e.g., +91 1234567890" required>
+            <small>Format: 10 digits only</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="course">Course of Interest:</label>
+            <select id="course" name="course" required>
+                <option value="">Select a Course</option>
+                <option value="Competitive Coding">Competitive Coding</option>
+                <option value="JAVA Stack">JAVA Stack</option>
+                <option value="MERN Stack">MERN Stack</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Graphic Design">Graphic Design</option>
+            </select>
+        </div>
+        
+        <input type="submit" value="Register">
+        
+    </form>
+</div>
+
+</body>
+</html>

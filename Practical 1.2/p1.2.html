@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Bank Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="p1.2.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="bank-name-container">
+                <svg class="bank-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM12 4.148L19.453 7.825L12 11.498L4.547 7.825L12 4.148ZM12 13.5L20 9.5V16.5L12 20.5V13.5Z"/>
+                </svg>
+                <span class="bank-name">Arunoday Bank</span>
+            </div>
+            <div class="account-info">
+                <div>Account Holder: Jane Doe</div>
+                <div>Account No: ****-1234</div>
+            </div>
+        </header>
+        <div class="dashboard-grid">
+            <div class="main-content">
+                <div class="card balance-section">
+                    <div class="balance-label">Current Balance</div>
+                    <div class="balance-amount">₹5,250.00</div>
+                    <div class="balance-actions">
+                        <button class="btn btn-deposit">Deposit</button>
+                        <button class="btn btn-withdraw">Withdraw</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Recent Transactions</div>
+                    <ul class="transaction-list">
+                        <li class="transaction-item">
+                            <div class="transaction-description">
+                                <div class="name">Amazon.com</div>
+                                <div class="date">Oct 25, 2023</div>
+                            </div>
+                            <div class="transaction-amount negative">-₹75.50</div>
+                        </li>
+                        <li class="transaction-item">
+                            <div class="transaction-description">
+                                <div class="name">Payroll Deposit</div>
+                                <div class="date">Oct 24, 2023</div>
+                            </div>
+                            <div class="transaction-amount positive">+₹2,000.00</div>
+                        </li>
+                        <li class="transaction-item">
+                            <div class="transaction-description">
+                                <div class="name">Grocery Store</div>
+                                <div class="date">Oct 23, 2023</div>
+                            </div>
+                            <div class="transaction-amount negative">-₹52.10</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="card">
+                    <div class="card-header">Account Details</div>
+                    <ul class="details-list">
+                        <li class="details-item">
+                            <span class="label">Account Type</span>
+                            <span class="value">Checking</span>
+                        </li>
+                        <li class="details-item">
+                            <span class="label">Routing Number</span>
+                            <span class="value">000123456</span>
+                        </li>
+                        <li class="details-item">
+                            <span class="label">Account Number</span>
+                            <span class="value">9876543210</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

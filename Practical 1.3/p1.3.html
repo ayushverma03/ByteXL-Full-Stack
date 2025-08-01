@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="p1.3.css">
+</head>
+<body class="light-theme">
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">Digitronics Inc</div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Dashboard</a></li>
+                    <li><a href="#">Users</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Orders</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <img src="https://placehold.co/40x40/007bff/FFFFFF/png?text=DTI" alt="ByteXL Logo" class="company-logo">
+                    <div class="header-title">Admin Dashboard</div>
+                </div>
+                <div class="header-right">
+                    <span class="admin-greeting">Hello, Admin</span>
+                    <div class="theme-switcher">
+                        <span class="theme-switcher-label">Toggle Theme</span>
+                        <div class="theme-button" onclick="toggleTheme()">Switch</div>
+                    </div>
+                    
+                    <div class="hamburger-menu">
+                        <input type="checkbox" id="menu-toggle">
+                        <label for="menu-toggle" class="hamburger-label">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                        <div id="settings-dropdown" class="settings-dropdown">
+                            <a href="#">Manage Users</a>
+                            <a href="#">System Logs</a>
+                            <a href="#">Billing</a>
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Cards using CSS Grid -->
+            <div class="dashboard-grid">
+                
+                <div class="card">
+                    <div class="card-title">Total Sales</div>
+                    <div class="card-value">₹1,25,000</div>
+                    
+                    
+                    <div class="chart-container">
+                        <svg class="sales-chart" viewBox="0 0 100 50">
+                            
+                            <path class="line" d="M0 45 Q 25 20, 50 25 T 100 10" stroke-linecap="round" />
+                            
+                            <circle class="point" cx="0" cy="45" r="2" />
+                            <circle class="point" cx="25" cy="20" r="2" />
+                            <circle class="point" cx="50" cy="25" r="2" />
+                            <circle class="point" cx="75" cy="18" r="2" />
+                            <circle class="point" cx="100" cy="10" r="2" />
+                        </svg>
+                    </div>
+
+                    <div class="card-detail">4% increase from last month</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title">New Users</div>
+                    <div class="card-value">1,245</div>
+                    <div class="card-detail">12% increase from last week</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Pending Orders</div>
+                    <div class="card-value">25</div>
+                    <div class="card-detail">3 new orders today</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Revenue</div>
+                    <div class="card-value">₹8,75,000</div>
+                    <div class="card-detail">8% increase from last quarter</div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid" style="margin-top: 2rem;">
+                
+                <div class="card">
+                    <div class="card-title">Recent Activity</div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <div class="activity-info">
+                                <div class="name">User 'Jane Doe' logged in</div>
+                                <div class="date">2 minutes ago</div>
+                            </div>
+                            <span class="activity-type">Login</span>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-info">
+                                <div class="name">New product 'Laptop Pro' added</div>
+                                <div class="date">1 hour ago</div>
+                            </div>
+                            <span class="activity-type">Product</span>
+                        </li>
+                        <li class="activity-item">
+                            <div class="activity-info">
+                                <div class="name">Order #12345 processed</div>
+                                <div class="date">3 hours ago</div>
+                            </div>
+                            <span class="activity-type">Order</span>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                <div class="card">
+                    <div class="card-title">Top Products</div>
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <div class="product-info">
+                                <div class="name">Laptop Pro</div>
+                                <div class="sales">3,500 units sold</div>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-info">
+                                <div class="name">Ergonomic Mouse</div>
+                                <div class="sales">2,100 units sold</div>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <div class="product-info">
+                                <div class="name">Wireless Keyboard</div>
+                                <div class="sales">1,800 units sold</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>

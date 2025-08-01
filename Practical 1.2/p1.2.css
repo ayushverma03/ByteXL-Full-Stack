@@ -1,0 +1,241 @@
+:root {
+    --primary-color: #2c5282;          
+    --secondary-color: #718096;        
+    --light-bg-color: #f7fafc;         
+    --card-bg-color: #ffffff;          
+    --text-dark: #2d3748;              
+    --text-light: #f7fafc;             
+    --positive-color: #48bb78;         
+    --negative-color: #e53e3e;         
+    --border-color: #e2e8f0;           
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --border-radius: 0.75rem;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #eef5f9 0%, #d8e0e6 100%);
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.bank-name-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.bank-logo {
+    width: 32px;
+    height: 32px;
+    color: var(--primary-color);
+}
+
+.bank-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+}
+
+.account-info {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.main-content, .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    flex: 1;
+}
+
+.card-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.balance-section {
+    text-align: center;
+}
+
+.balance-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.balance-amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--positive-color);
+    margin-bottom: 1.5rem;
+}
+
+.balance-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-deposit {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-withdraw {
+    background-color: var(--negative-color);
+    color: var(--text-light);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.transaction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.transaction-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-description {
+    flex-grow: 1;
+}
+
+.transaction-description .name {
+    font-weight: 600;
+}
+
+.transaction-description .date {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+}
+
+.transaction-amount {
+    font-weight: 700;
+}
+
+.transaction-amount.positive {
+    color: var(--positive-color);
+}
+
+.transaction-amount.negative {
+    color: var(--negative-color);
+}
+
+.details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.details-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-item:last-child {
+    border-bottom: none;
+}
+
+.details-item .label {
+    font-weight: 500;
+}
+
+.details-item .value {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 1.5rem;
+    }
+    .account-info {
+        text-align: center;
+    }
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    .balance-amount {
+        font-size: 2.5rem;
+    }
+    .balance-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .btn {
+        width: 100%;
+    }
+}
