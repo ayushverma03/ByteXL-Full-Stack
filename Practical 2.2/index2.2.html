@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSpractice2</title>
+    <link rel="stylesheet" href="JS2.2.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Product List</h2>
+        <label for="category">Filter By: </label>
+        <select name="" id="category">
+            <option value="All">All</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Books">Books</option>
+        </select>
+
+
+        <div id="product-list">
+            <div class="product" data-category="Clothing">T-Shirt</div>
+            <div class="product" data-category="Clothing">Jeans</div>
+            <div class="product" data-category="Electronics">Headphones</div>
+            <div class="product" data-category="Electronics">Smartphone</div>
+            <div class="product" data-category="Books">Novel</div>
+            <div class="product" data-category="Books">Cookbook</div>
+        </div>
+    </div>
+
+
+    <script>
+        let dropdown = document.getElementById("category");
+        let products = document.querySelectorAll(".product");
+
+        dropdown.addEventListener("change", ()=>{
+            const selected = dropdown.value;
+            
+            products.forEach(product => {
+                if (selected === "All" || product.dataset.category === selected) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display ="none";
+                }
+            } )
+        } )
+    </script>
+</body>
+</html>
