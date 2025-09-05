@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Character Counter</title>
+  <link rel="stylesheet" href="style2.1.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Live Character Counter</h2>
+    <textarea id="text" placeholder="Start typing..."></textarea>
+    
+    <h3>You wrote:</h3>
+    <div class="output-box" id="counter1">Nothing yet...</div>
+
+    <h3>Characters: <span id="counter2">0</span></h3>
+  </div>
+
+  <script>
+    let text = document.getElementById("text");
+    let counter1 = document.getElementById("counter1");
+    let counter2 = document.getElementById("counter2");
+
+    text.addEventListener("input", () => {
+      counter1.textContent = text.value || "Nothing yet...";
+      counter2.textContent = text.value.length;
+    });
+  </script>
+</body>
+</html>
