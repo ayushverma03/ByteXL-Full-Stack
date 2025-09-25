@@ -1,0 +1,28 @@
+/* src/components/BookForm.css */
+.book-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book-form input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 150px;
+}
+
+.book-form button {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  background-color: #43a047;
+  color: white;
+  cursor: pointer;
+}
+
+.book-form button:hover {
+  background-color: #2e7d32;
+}
