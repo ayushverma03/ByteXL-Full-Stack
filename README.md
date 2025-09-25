@@ -1,2 +1,2 @@
 # ByteXL-Full-Stack
-Here I have uploaded all my practicals of Full Stack on ByteXL.
+Here I upload all my practicals of FullStack for assessment of ByteXL.
