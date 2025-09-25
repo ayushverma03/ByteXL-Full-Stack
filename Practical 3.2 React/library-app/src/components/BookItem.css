@@ -1,0 +1,30 @@
+/* src/components/BookItem.css */
+.book-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fafafa;
+  transition: transform 0.2s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #1e88e5;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-card button:hover {
+  background-color: #1565c0;
+}
