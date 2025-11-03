@@ -1,15 +1,18 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const cors = require("cors");
+const connectDB = require("./config/db");
 const studentRoutes = require("./routes/studentRoutes");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// Connect to Database
+connectDB();
+
+// Routes
 app.use("/api/students", studentRoutes);
 
-mongoose.connect("mongodb://127.0.0.1:27017/studentDB")
-  .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log(err));
-
-app.listen(5000, () => console.log("Server running on port 5000"));
+// Start Server
+const PORT = 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
